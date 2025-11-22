@@ -3,17 +3,7 @@ services:
     build: .
     image: html2oft-converter
     volumes:
-      - .:/app
-      # This line is KEY: ensures your C# code overwrites the template
-      - ./Program.cs:/project/ConversorOutlook/Program.cs
-    command: >
-      sh -c "
-      echo '🔧 Cleaning previous build...' &&
-      cd /project/ConversorOutlook &&
-      rm -rf bin obj &&
-      echo '📦 Compiling .NET project...' &&
-      dotnet build --nologo -v quiet &&
-      echo '' &&
-      cd /app &&
-      bash /app/process_all.sh
-      "
+      - ./mail:/app/mail
+      - ./output:/app/output
+      - ./temp:/app/temp
+    command: bash /app/process_all.sh

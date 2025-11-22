@@ -41,11 +41,10 @@ for folder in "$MAIL_DIR"/*/ ; do
     echo "📝 Step 1/2: Generating EML..."
     if python3 /app/generate_eml.py "$folder" "$temp_eml"; then
 
-        # STEP 2: Convert EML to OFT with .NET
+        # STEP 2: Convert EML to OFT with .NET (using compiled Release DLL)
         echo "🔄 Step 2/2: Converting to OFT..."
-        cd /project/ConversorOutlook
 
-        if dotnet run "$temp_eml" "$final_oft"; then
+        if dotnet /app/dotnet/ConversorOutlook.dll "$temp_eml" "$final_oft"; then
             echo "✅ Completed: $final_oft"
             successful=$((successful + 1))
         else

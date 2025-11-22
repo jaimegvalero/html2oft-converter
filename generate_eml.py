@@ -74,7 +74,7 @@ def create_eml(input_folder, output_file):
 if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: python3 generate_eml.py <input_folder> <output_file>")
-        print("Example: python3 generate_eml.py mail/if_nl_adyen_new_es output.eml")
+        print("Example: python3 generate_eml.py mail/welcome_email output.eml")
         sys.exit(1)
 
     folder = sys.argv[1]

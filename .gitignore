@@ -1,0 +1,105 @@
+# Output directories
+output/
+temp/
+
+# .NET build artifacts
+bin/
+obj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Docker
+.dockerignore
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Test files
+*.test.eml
+*.test.oft
+test_output/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Node.js / Frontend
+node_modules/
+pnpm-debug.log*
+.pnpm-store/
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+
+# Astro
+.astro/
+dist/
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+service-account*.json
+
+# Google Cloud
+.gcloud/
+*.json.bak
+
+# Python additional
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.Python
+.coverage
+htmlcov/
+.pytest_cache/
+.hypothesis/
+
+# Secrets
+*.pem
+*.key
